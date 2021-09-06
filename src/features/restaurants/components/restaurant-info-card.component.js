@@ -2,8 +2,8 @@ import React from "react";
 import { SvgXml } from "react-native-svg";
 import star from "../../../../assets/star";
 import open from "../../../../assets/open";
-import { Spacer } from "../../../components/searchBar/spacer/spacer.component";
 import { Text } from "../../../components/typography/text.component";
+import { Spacer } from "../../../components/spacer/spacer.component";
 import {
   RestaurantCard,
   RestaurantCardCover,
@@ -25,7 +25,7 @@ export const RestaurantInfoCard = ({ restaurant = {} }) => {
     address = "Raw 100 Ndota Street",
     isOpenNow = true,
     rating = 5,
-    isClosedTemporarily,
+    isClosedTemporarily = true,
   } = restaurant;
 
   const ratingArray = Array.from(new Array(Math.floor(rating)));
@@ -42,9 +42,13 @@ export const RestaurantInfoCard = ({ restaurant = {} }) => {
             ))}
           </Rating>
           <SectionEnd>
+            {/* <Spacer> */}
             {isClosedTemporarily && (
-              <Text variant="error">CLOSED TEMPORARILY</Text>
+              <Text variant="label" style={{ color: "red" }}>
+                CLOSED TEMPORARILY
+              </Text>
             )}
+            {/* </Spacer> */}
             <Spacer position="left" size="large">
               {isOpenNow && <SvgXml xml={open} width={20} height={20} />}
             </Spacer>
