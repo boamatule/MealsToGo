@@ -2,7 +2,7 @@ import React from "react";
 import { Text } from "react-native";
 import { SafeArea } from "../../../components/utility/safe-area.component";
 
-export const Settings = () => (
+export const SettingScreen = () => (
   <SafeArea>
     <Text>Settings</Text>
   </SafeArea>

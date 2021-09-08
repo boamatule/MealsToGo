@@ -9,6 +9,7 @@ import { RestaurantsScreen } from "../../../features/restaurants/screens/restaur
 import { RestaurantDetailScreen } from "../../../features/restaurants/screens/restaurant-details.screen";
 
 const RestaurantStack = createStackNavigator();
+
 export const RestaurantsNavigator = () => {
   return (
     <RestaurantStack.Navigator
