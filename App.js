@@ -2,7 +2,8 @@ import { StatusBar as ExpoStatusBar } from "expo-status-bar";
 import React from "react";
 import { ThemeProvider } from "styled-components/native";
 
-import AppLoading from "expo-app-loading";
+import * as firebase from "firebase";
+
 import {
   useFonts as useOswald,
   Oswald_400Regular,
@@ -15,6 +16,20 @@ import { Navigation } from "./src/infrastucture/theme/navigation";
 import { RestaurantsContextProvider } from "./src/services/restaurants/restaurants.context";
 import { LocationContextProvider } from "./src/services/location/location.context";
 import { FavouritesContextProvider } from "./src/services/favourites/favourites.context";
+import { AuthenticationContextProvider } from "./src/services/authentication/authentication.context";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyDDkP6jCauwcpIBawul-g_aWklwWlsqbjs",
+  authDomain: "mealstogo-c6d2e.firebaseapp.com",
+  projectId: "mealstogo-c6d2e",
+  storageBucket: "mealstogo-c6d2e.appspot.com",
+  messagingSenderId: "428604827672",
+  appId: "1:428604827672:web:ff74c45102d763bf0ebb6d",
+};
+
+if (!firebase.apps.length) {
+  firebase.initializeApp(firebaseConfig);
+}
 
 export default function App() {
   const [oswaldLoaded] = useOswald({
@@ -26,11 +41,13 @@ export default function App() {
   });
 
   if (!oswaldLoaded || !latoLoaded) {
-    return <AppLoading />;
-  } else {
-    return (
-      <>
-        <ThemeProvider theme={theme}>
+    return null;
+  }
+
+  return (
+    <>
+      <ThemeProvider theme={theme}>
+        <AuthenticationContextProvider>
           <FavouritesContextProvider>
             <LocationContextProvider>
               <RestaurantsContextProvider>
@@ -38,9 +55,9 @@ export default function App() {
               </RestaurantsContextProvider>
             </LocationContextProvider>
           </FavouritesContextProvider>
-        </ThemeProvider>
-        <ExpoStatusBar style="auto" />
-      </>
-    );
-  }
+        </AuthenticationContextProvider>
+      </ThemeProvider>
+      <ExpoStatusBar style="auto" />
+    </>
+  );
 }
