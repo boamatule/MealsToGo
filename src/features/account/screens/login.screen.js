@@ -1,18 +1,18 @@
-import React from "react";import { Button } from 'react-native-paper';
-import { Button } from 'react-native-paper';
-import { AccountBackground, AccountCover } from "../component/account.styles";
+import React from "react";
+import { AccountBackground, AccountCover, AuthButton } from "../component/account.styles";
 
 export const LoginScreen = () => {
   return (
     <AccountBackground>
       <AccountCover />
-      <Button 
+      <AuthButton
         icon="lock-open-outline"
         color="black"
-        mode="contained" 
-        onPress={() => console.log('Pressed')}>
+        mode="contained"
+        onPress={() => console.log("Pressed")}
+      >
         Login
-      </Button>
+      </AuthButton>
     </AccountBackground>
   );
 };
