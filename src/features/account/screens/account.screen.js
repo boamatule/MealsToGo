@@ -23,7 +23,7 @@ export const Account = ({ navigation }) => {
         </AuthButton>
         <Spacer size="large">
           <AuthButton
-            icon="lock-open-outline"
+            icon="email"
             // color="black"
             mode="contained"
             onPress={() => navigation.navigate("Register")}
