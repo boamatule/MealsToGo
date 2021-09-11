@@ -7,13 +7,13 @@ import {
 
 import { RestaurantsScreen } from "../../../features/restaurants/screens/restaurants.screen";
 import { RestaurantDetailScreen } from "../../../features/restaurants/screens/restaurant-details.screen";
+import { FavouritesScreen } from "../../../features/settings/screens/favourites.screen";
 
 const RestaurantStack = createStackNavigator();
 
 export const RestaurantsNavigator = () => {
   return (
     <RestaurantStack.Navigator
-      // headerMode="none"
       screenOptions={{
         ...TransitionPresets.ModalSlideFromBottomIOS,
         headerShown: false,
@@ -27,6 +27,8 @@ export const RestaurantsNavigator = () => {
         name="RestaurantDetail"
         component={RestaurantDetailScreen}
       />
+
+      <RestaurantStack.Screen name="Favourites" component={FavouritesScreen} />
     </RestaurantStack.Navigator>
   );
 };
