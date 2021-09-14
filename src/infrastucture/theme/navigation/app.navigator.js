@@ -5,7 +5,6 @@ import Ionicons from "react-native-vector-icons/Ionicons";
 import { RestaurantsNavigator } from "./restaurants.navigator";
 import { MapScreen } from "../../../features/map/screens/map.screen";
 import { SettingsScreen } from "../../../features/settings/screens/settings.screen";
-import { FavouritesScreen } from "../../../features/settings/screens/favourites.screen";
 
 import { RestaurantsContextProvider } from "../../../services/restaurants/restaurants.context";
 import { LocationContextProvider } from "../../../services/location/location.context";
@@ -43,7 +42,6 @@ export const AppNavigator = () => (
           <Tab.Screen name="Restaurants" component={RestaurantsNavigator} />
           <Tab.Screen name="Map" component={MapScreen} />
           <Tab.Screen name="Settings" component={SettingsScreen} />
-          {/* <Tab.Screen name="Favourites" component={FavouritesScreen} /> */}
         </Tab.Navigator>
       </RestaurantsContextProvider>
     </LocationContextProvider>
