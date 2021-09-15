@@ -1,6 +1,6 @@
 const functions = require("firebase-functions");
 const {geocodeRequest} = require("./geocode");
-const {placesRequest} = require("./places");
+const {placesRequest} = require("./place");
 
 
 exports.geocode = functions.https.onRequest((request, response) => {

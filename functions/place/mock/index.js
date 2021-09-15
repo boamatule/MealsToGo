@@ -1,6 +1,7 @@
 const antwerp = require("./antwerp");
 const chicago = require("./chicago");
 const toronto = require("./toronto");
+// eslint-disable-next-line camelcase
 const san_francisco = require("./san_francisco");
 
 module.exports.mocks = {
