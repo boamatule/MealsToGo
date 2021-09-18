@@ -1,8 +1,11 @@
-import React, { useState } from "react";
-import { Text, View, Button, TextInput } from "react-native";
+import React from "react";
 
-export const CheckoutScreen = () => {
-  <View>
-    <Text>Checkout</Text>
-  </View>;
-};
+import { SafeArea } from "../../../components/utility/safe-area.component";
+
+import { CreditCardInput } from "../component/credit-card.component";
+
+export const CheckoutScreen = () => (
+  <SafeArea>
+    <CreditCardInput />
+  </SafeArea>
+);
