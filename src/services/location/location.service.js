@@ -1,12 +1,18 @@
 import camelize from "camelize";
+import { host, isMock } from "../../utils/env";
 
 export const locationRequest = (searchTerm) => {
-  return fetch(
-    `http://localhost:5001/mealstogo-c6d2e/us-central1/geocode?city=${searchTerm}`
-  ).then((res) => {
-    return res.json();
-  });
+  return fetch(`${host}/geocode?city=${searchTerm}&mock=${isMock}`).then(
+    (res) => {
+      return res.json();
+    }
+  );
 };
+
+// export const locationRequest = async (searchTerm) => {
+//   const res = await fetch(`${host}/geocode?city=${searchTerm}&mock=${isMock}`);
+//   return await res.json();
+// };
 
 export const locationTransform = (result) => {
   const formattedResponse = camelize(result);
