@@ -1,37 +1,39 @@
 import React, { createContext, useState, useEffect, useContext } from "react";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
-import { AuthenticationContext } from "../authentication/authentication.context"; 
+import { AuthenticationContext } from "../authentication/authentication.context";
 
 export const CartContext = createContext();
 
 export const CarContextProvider = ({ children }) => {
-	const { user } = useContext(AuthenticationContext);
+  const { user } = useContext(AuthenticationContext);
 
-	const [cart, setCart] = useState([]);
-	const [restaurant, 	setRestaurant] = useState(null);
+  const [cart, setCart] = useState([]);
+  const [restaurant, setRestaurant] = useState(null);
 
-	const add = (item, rst) => {
-		if (!restaurant || restaurant.placeId !== rst.placeId) {
-		setRestaurant(rst);
-		setCart([item]);
-	}
-	setCart([...cart, item]);
-};
+  const add = (item, rst) => {
+    if (!restaurant || restaurant.placeId !== rst.placeId) {
+      setRestaurant(rst);
+      setCart([item]);
+    }
+    setCart([...cart, item]);
+  };
 
-const clear = () => {
-	setCart([]);
-	setRestaurant(null);
-};
+  const clear = () => {
+    setCart([]);
+    setRestaurant(null);
+  };
 
-	return (
-		<CartContext.Provider values={{
-			addToCart: add,
-			clearCart: clear,
-			restaurant,
-			cart,
-		}}>
-			children
-		</CartContext.Provider>
-	);
+  return (
+    <CartContext.Provider
+      values={{
+        addToCart: add,
+        clearCart: clear,
+        restaurant,
+        cart,
+      }}
+    >
+      children
+    </CartContext.Provider>
+  );
 };
