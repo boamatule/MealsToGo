@@ -5,7 +5,7 @@ import { AuthenticationContext } from "../authentication/authentication.context"
 
 export const CartContext = createContext();
 
-export const CarContextProvider = ({ children }) => {
+export const CartContextProvider = ({ children }) => {
   const { user } = useContext(AuthenticationContext);
 
   const [cart, setCart] = useState([]);
@@ -15,8 +15,9 @@ export const CarContextProvider = ({ children }) => {
     if (!restaurant || restaurant.placeId !== rst.placeId) {
       setRestaurant(rst);
       setCart([item]);
+    } else {
+      setCart([...cart, item]);
     }
-    setCart([...cart, item]);
   };
 
   const clear = () => {
@@ -26,14 +27,14 @@ export const CarContextProvider = ({ children }) => {
 
   return (
     <CartContext.Provider
-      values={{
+      value={{
         addToCart: add,
         clearCart: clear,
         restaurant,
         cart,
       }}
     >
-      children
+    {children}
     </CartContext.Provider>
   );
 };

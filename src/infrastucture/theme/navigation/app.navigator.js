@@ -7,10 +7,10 @@ import { MapScreen } from "../../../features/map/screens/map.screen";
 import { SettingsScreen } from "../../../features/settings/screens/settings.screen";
 import { CheckoutScreen } from "../../../features/checkout/screens/checkout.screens";
 
+import { CartContextProvider } from "../../../services/cart/cart.context";
 import { RestaurantsContextProvider } from "../../../services/restaurants/restaurants.context";
 import { LocationContextProvider } from "../../../services/location/location.context";
 import { FavouritesContextProvider } from "../../../services/favourites/favourites.context";
-import { CartContextProvider } from "../../../services/cart/cart.context";
 
 const Tab = createBottomTabNavigator();
 
