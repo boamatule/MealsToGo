@@ -1,5 +1,8 @@
 {
   "google": {
     "key": "AIzaSyC3ffMG5HvNd3MH1rOHv0KeqeqOzAyGnwU"
+  },
+  "stripe": {
+    "key": "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"
   }
 }
