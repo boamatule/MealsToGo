@@ -8,7 +8,6 @@ export const restaurantsRequest = (location) => {
 };
 
 export const restaurantsTransform = ({ results = [] }) => {
-  // const newResult = camelize(results.length);
   const mappedResults = results.map((restaurant) => {
     return {
       ...restaurant,

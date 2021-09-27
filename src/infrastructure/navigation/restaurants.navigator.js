@@ -5,10 +5,10 @@ import {
   TransitionPresets,
 } from "@react-navigation/stack";
 
-import { RestaurantsScreen } from "../../../features/restaurants/screens/restaurants.screen";
-import { RestaurantDetailScreen } from "../../../features/restaurants/screens/restaurant-details.screen";
-import { FavouritesScreen } from "../../../features/settings/screens/favourites.screen";
-import { CameraScreen } from "../../../features/settings/screens/camera.screen";
+import { RestaurantsScreen } from "../../features/restaurants/screens/restaurants.screen";
+import { RestaurantDetailScreen } from "../../features/restaurants/screens/restaurant-details.screen";
+import { FavouritesScreen } from "../../features/settings/screens/favourites.screen";
+import { CameraScreen } from "../../features/settings/screens/camera.screen";
 
 const RestaurantStack = createStackNavigator();
 
