@@ -85,6 +85,7 @@ if (!firebase.apps.length) {
 const fetchFont = () => {
   return Font.loadAsync({
     Oswald_400Regular: require("./assets/fonts/Oswald-VariableFont_wght.ttf"),
+    Lato_400Regular: require("./assets/fonts/Lato-Regular.ttf"),
   });
 };
 
