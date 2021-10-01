@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react";
-import { List } from "react-native-paper";
+import { List, Divider } from "react-native-paper";
 import { ScrollView } from "react-native";
 
 import { SafeArea } from "../../../components/utility/safe-area.component";
@@ -28,8 +28,10 @@ export const RestaurantDetailScreen = ({ navigation, route }) => {
             onPress={() => setBreakfastExpanded(!breakfastExpanded)}
           >
             <List.Item title="Chingu's snack" />
+            <Divider />
             <List.Item title="Classic Breakfast" />
           </List.Accordion>
+          <Divider />
 
           <List.Accordion
             title="Lunch"
@@ -38,9 +40,14 @@ export const RestaurantDetailScreen = ({ navigation, route }) => {
             onPress={() => setLunchExpanded(!lunchExpanded)}
           >
             <List.Item title="Burger w/ Fries à La Bella" />
+            <Divider />
             <List.Item title="Vegan Steak" />
+            <Divider />
+
             <List.Item title="Steak Sandwich" />
+            <Divider />
           </List.Accordion>
+          <Divider />
 
           <List.Accordion
             title="Dinner"
@@ -49,9 +56,15 @@ export const RestaurantDetailScreen = ({ navigation, route }) => {
             onPress={() => setDinnerExpanded(!dinnerExpanded)}
           >
             <List.Item title="Cassic Swedish Meat Balls" />
+            <Divider />
+
             <List.Item title="Baked Mushroom" />
+            <Divider />
+
             <List.Item title="Kings Duck" />
+            <Divider />
           </List.Accordion>
+          <Divider />
 
           <List.Accordion
             title="Drinks"
@@ -60,10 +73,20 @@ export const RestaurantDetailScreen = ({ navigation, route }) => {
             onPress={() => setDrinksExpanded(!drinksExpanded)}
           >
             <List.Item title="Caipirinha" />
+            <Divider />
+
             <List.Item title="La Cosa Nostra" />
+            <Divider />
+
             <List.Item title="Tøyen Cola" />
+            <Divider />
+
             <List.Item title="Fanta Ananas" />
+            <Divider />
+
             <List.Item title="Cuban Link" />
+            <Divider />
+
             <List.Item title="Ghost La Favela" />
           </List.Accordion>
         </List.Section>
