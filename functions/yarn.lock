@@ -156,6 +156,7 @@
     stream-events "^1.0.1"
     xdg-basedir "^4.0.0"
 
+<<<<<<< HEAD
 "@googlemaps/google-maps-services-js@^3.2.2":
   version "3.2.2"
   resolved "https://registry.yarnpkg.com/@googlemaps/google-maps-services-js/-/google-maps-services-js-3.2.2.tgz#7f650fedf3e627111c26fa220612bb6bbd8c1a4b"
@@ -165,6 +166,16 @@
     axios "^0.21.1"
     crypto "^1.0.1"
     query-string "^7.0.1"
+=======
+"@googlemaps/google-maps-services-js@^3.1.16":
+  version "3.1.16"
+  resolved "https://registry.yarnpkg.com/@googlemaps/google-maps-services-js/-/google-maps-services-js-3.1.16.tgz#e82dc8f202c87b042d3b4c989936110cb83da2e2"
+  integrity sha512-Hb1zItxsm68vkWb5i+/wDj64ZK66DZlatglkdNWAWM2ziARdgj+Q4XeWxbkdHh+/OKmeKEcknC8ADF9ZgS/G1w==
+  dependencies:
+    agentkeepalive "^4.1.0"
+    axios "^0.21.1"
+    query-string "^6.11.0"
+>>>>>>> ErrorManagment
     retry-axios "^2.2.1"
 
 "@grpc/grpc-js@~1.3.0":
@@ -1046,10 +1057,17 @@ firebase-functions-test@^0.2.0:
     "@types/lodash" "^4.14.104"
     lodash "^4.17.5"
 
+<<<<<<< HEAD
 firebase-functions@^3.15.7:
   version "3.15.7"
   resolved "https://registry.yarnpkg.com/firebase-functions/-/firebase-functions-3.15.7.tgz#ac88657e7e28f5a5926d41ae3e8fae9c94621ccd"
   integrity sha512-ZD7r8eoWWebgs+mTqfH8NLUT2C0f7/cyAvIA1RSUdBVQZN7MBBt3oSlN/rL3e+m6tdlJz6YbQ3hrOKOGjOVYvQ==
+=======
+firebase-functions@^3.15.6:
+  version "3.15.6"
+  resolved "https://registry.yarnpkg.com/firebase-functions/-/firebase-functions-3.15.6.tgz#5008bde8864ff4c236ee0641ff392194d9df19cb"
+  integrity sha512-VII8hV/jmg1L97SJrz7I0a4Heju4b2+4RxKBIcey5sU5pqV96acIjUOwn124GRZP9hStK36q8hm0W5s9lfQ3HQ==
+>>>>>>> ErrorManagment
   dependencies:
     "@types/cors" "^2.8.5"
     "@types/express" "4.17.3"
@@ -1851,6 +1869,7 @@ qs@6.7.0:
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.7.0.tgz#41dc1a015e3d581f1621776be31afb2876a9b1bc"
   integrity sha512-VCdBRNFTX1fyE7Nb6FYoURo/SPe62QCaAyzJvUjwRaIsc+NePBEniHlvxFmmX56+HZphIGtV0XeCirBtpDrTyQ==
 
+<<<<<<< HEAD
 qs@^6.6.0:
   version "6.10.1"
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.10.1.tgz#4931482fa8d647a5aab799c5271d2133b981fb6a"
@@ -1862,6 +1881,12 @@ query-string@^7.0.1:
   version "7.0.1"
   resolved "https://registry.yarnpkg.com/query-string/-/query-string-7.0.1.tgz#45bd149cf586aaa582dffc7ec7a8ad97dd02f75d"
   integrity sha512-uIw3iRvHnk9to1blJCG3BTc+Ro56CBowJXKmNNAm3RulvPBzWLRqKSiiDk+IplJhsydwtuNMHi8UGQFcCLVfkA==
+=======
+query-string@^6.11.0:
+  version "6.14.1"
+  resolved "https://registry.yarnpkg.com/query-string/-/query-string-6.14.1.tgz#7ac2dca46da7f309449ba0f86b1fd28255b0c86a"
+  integrity sha512-XDxAeVmpfu1/6IjyT/gXHOl+S0vQ9owggJ30hhWKdHAsNPOcasn5o9BW0eejZqL2e4vMjhAxoW3jVHcD6mbcYw==
+>>>>>>> ErrorManagment
   dependencies:
     decode-uri-component "^0.2.0"
     filter-obj "^1.1.0"

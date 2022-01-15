@@ -14,4 +14,10 @@ web-build/
 
 */node_modules/**/*
 firebase-debug.log
+<<<<<<< HEAD
 ui-debug.log	.runtimeconfig.json
+=======
+ui-debug.log
+.runtimeconfig.json
+
+>>>>>>> ErrorManagment
