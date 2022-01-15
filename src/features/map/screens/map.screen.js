@@ -66,7 +66,11 @@ const RestaurantMap = ({ navigation }) => {
   );
 };
 
+<<<<<<< HEAD
 export const MapScreen = () => {
+=======
+export const MapScreen = ({ navigation }) => {
+>>>>>>> GoogleCloud
   const { location } = useContext(LocationContext);
   if (!location) {
     return (
@@ -78,5 +82,9 @@ export const MapScreen = () => {
       />
     );
   }
+<<<<<<< HEAD
   return <RestaurantMap />;
+=======
+  return <RestaurantMap navigation={navigation} />;
+>>>>>>> GoogleCloud
 };
